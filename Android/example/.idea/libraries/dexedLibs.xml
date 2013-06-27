@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="dexedLibs">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bin/dexedLibs/jsoup-1.7.2-4f8e3b9771a88b60c0dcefb60cc05cdb.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bin/dexedLibs/cordova-2.3.0-8b2716ffa71ba3273e5bc12417c21768.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

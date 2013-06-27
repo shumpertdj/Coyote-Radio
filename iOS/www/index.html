@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <meta name = "viewport" content ="width=device-width, initial-scale=.55", "user-scalable = no">
+        
+        <title>Coyote Radio</title>
+            
+            
+       
+        <link rel="stylesheet" type="text/css" href="css/index.css"/>
+        <script type="text/javascript" src="cordova-2.4.0.js"></script> 
+        <script src="js/jquery-1.7.2.min.js"></script>
+        <script src="js/nowPlaying.js"></script>
+        <script src="js/test.js"></script>
+        <script src="js/browserMusic.js"></script>
+        <script src="js/toggle.js"></script>
+        <script src="js/hideDivs.js"></script>
+    </head>
+    <body>
+        
+        <div>
+            <img id="banner" src="brandon/Coyote_Radio_Log.png">
+        <div id="in">
+            <img id="bar" src="brandon/menuheader.png">
+            <p>
+            <a href="#" id="tryHard" onclick="hide('hidden')"><img id="nowPl" src="brandon/nowplaying.png" alt="Now Playing"></a>
+            <br>
+            <a href="#" id="tryHard1" onclick="login('http://m.csusb.edu/coyoteradio#/coyoteradio/home/programSchedule.html/ ')"><img id="nowPl" src="brandon/programschedule.png" alt="Program Schedule"></a>
+                <br>
+            <a href="#" id="tryHard2" onclick="login('http://m.csusb.edu/coyoteradio#/coyoteradio/home/events.html ')"><img id="nowPl" src="brandon/events.png" alt="Events"></a>
+                <br>
+            <a href="#" id="tryHard3" onclick="login('http://m.csusb.edu/coyoteradio#/coyoteradio/home/advertising.html ')"><img id="nowPl" src="brandon/becomeasponsor.png" alt="Sponsers"></a>
+                <br>
+            <a href="#" id="tryHard4" onclick="hide('contact')"><img id="nowPl" src="brandon/contactus.png" alt="Contact Us"></a>
+            </p>
+        </div>
+        <div id="contact">
+            <a href="#" onclick="hide('success')"><img id="menu" src="brandon/back.png" class="align-left"></a>
+            <img id="bar" src="brandon/contactusheader.png">
+                <p>
+                <a id="facebook" onclick="login('https://m.facebook.com/csusbcoyoteradio?_rdr ')"><img id="like" src="brandon/facebook.png" alt="Like us on Facebook!"></a>
+                <a id="twitter" onclick="login('https://mobile.twitter.com/coyoteradiocsu')"><img id="like" src="brandon/twitter.png" alt="Follow us on Twitter!"></a>
+                <a onclick="login('https://m.youtube.com/#/thecoyoteradio ')"><img id="like" src="brandon/youtube.png" alt="Subscribe to our YouTube!"></a>
+                <a onclick="login('http://m.csusb.edu/coyoteradio#/coyoteradio/home/contactUs.html ')"><img id="like" src="brandon/contactstaff.png" alt="Contact a Staff Member!"></a>
+                <a onclick="login('http://m.csusb.edu/coyoteradio#/coyoteradio/home/ourStory.html ')"><img id="like" src="brandon/ourstory.png" alt="Our Story"></a>
+                </p>
+        </div>
+        <!--<div id="staff">
+            Coyote Radio Request Line.
+            
+            (909) 537-5617
+        </div>-->
+        <div id="se">
+            <div>
+                <a href="#" onclick="hide('success')"><img id="menu" src="brandon/back.png" class="align-left"></a>
+            </div>
+            <img id="bar" src="brandon/nowplayingheader.png">
+                <div id="alignR">
+                    <p class="next">
+						<font COLOR="#FFFFFF"><span class="past">Up Next:</span></font>
+						<font COLOR="#FFFFFF"><span id="nextSong" class="prev"></span></font>
+                        <br>
+                        <font COLOR="#FFFFFF"><span class="past">By:</span></font>
+						<font COLOR="#FFFFFF"><span id="nextArtist" class="artist"></span></font>
+					</p>
+                </div>
+                <div id="output21"></div>
+                <div id="output22"></div>
+                <div>
+                    <img class="headphones" src="brandon/album.png"/>
+                </div>
+                <div id="NP">
+					<p>
+                    <font COLOR="#FFFFFF"><span id="currentSong" class="now"></span></font>
+					<br>
+					<font COLOR="#FFFFFF"><span class="past">By:</span></font>
+                    <font COLOR="#FFFFFF"><span id="currentArtist" class="artist2"></span></font>
+					</p>
+                </div>
+                 <a href="#" onclick="openArtist()"><font COLOR="#FFFFFF">Artist Bio</font></a>
+                <div>
+				                <a id="adUrl" href="#" onclick="login('http://m.csusb.edu')"><img id="ad" src="brandon/raffma.png"></a>
+                </div>
+                </div>	
+        <div id="footer">
+            <a id="Play" href="#" onclick="playStream();"> <img id="playStop" src="brandon/play.png"></a>  
+        </div>
+        </div>
+    </body>
+</html>

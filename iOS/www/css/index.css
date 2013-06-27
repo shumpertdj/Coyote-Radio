@@ -1,0 +1,242 @@
+body{
+                background: url("../brandon/Background_Only.png") no-repeat center center fixed;
+                -webkit-tap-highlight-color: rgba(0,0,0,0);
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+                font-family: Helvetica;
+                font-size: 1.3em;
+                margin:0;
+            }
+          
+            .image {
+                position: relative;
+                text-align:center;
+            }
+          
+            p span.now {
+                font-size: 1.5em;
+                font-weight: normal;
+                text-align: center;
+                left:20%;
+                top: 1%;
+                font-weight: bold;
+            }
+          
+            p span.artist {
+                font-size: .9em;
+                font-weight: normal;
+                font-style: italic;
+                
+            }
+            p span.artist2 {
+                font-size: 1em;
+                font-weight: normal;
+                font-style: italic;
+                left:20%;
+                top: 10%;
+            }
+            p span.prev {
+                text-align: center;
+                position: relative;
+                font-size: 1.1em;
+            }
+            p span.past {
+                font-style: normal;
+                font-size: .5em;
+            }
+            .scroll-table{
+                width:90%;
+                height: 10%;
+                margin-left:auto;
+                margin-right:auto;
+                overflow: auto;
+                table-layout:fixed;
+            }
+            .reg-table{
+                height:5%;
+                width:10%;
+                left: 5%;
+                margin-left:auto;
+                margin-right:auto;
+            }
+            hr {
+                color: #FFFFFF;
+                width: 40%;
+                border-top: 0px;
+            }
+            
+            #img{
+                min-width:100%;
+                max-width:100%;
+                height: 13%;
+                -webkit-tap-highlight-color: rgba(0,0,0,0);
+            }
+            
+            #banner{
+                min-width:100%;
+                max-width:100%;
+                -webkit-tap-highlight-color: rgba(0,0,0,0);
+                padding-right: 0;
+            }
+            
+            #nowPl{
+                min-width:90%;
+                max-width:90%;
+                height:11%;
+                -webkit-tap-highlight-color: rgba(0,0,0,0);
+            }
+            .image2{
+                position:relative;
+                min-width:100%;
+                max-width:100%;
+                height:45%;
+            }
+            #nowPlaying{
+                left:10%;
+                position:absolute;
+                text-align:center;
+                top: 27%;
+                width: 90%;
+            }
+            #ad{
+                width:100%;
+                height:10%;
+                -webkit-tap-highlight-color: rgba(0,0,0,0);
+                bottom: 10%;
+                position:fixed;
+            }
+            #table{
+                margin: 0 auto;
+            }
+            #playStop {
+                
+                width:16%;
+                height:10%;
+                right:42%;
+                bottom:0px;
+                position: fixed;
+                -webkit-tap-highlight-color: rgba(0,0,0,0);
+                
+            }
+            .headphones{
+                text-align:center;
+                min-width:30%;
+                max-width:30%;
+                
+            }
+            #in {
+                display: block;
+                text-align:center;
+            }
+            #se {
+                display: none;
+                text-align:center;
+            }
+            #alignR{
+                text-align: right;
+            }
+            #contact{
+                display: none;
+                text-align:center;
+                -webkit-tap-highlight-color:rgba(0,0,0,0);
+            }
+            #like{
+                min-width:90%;
+                max-width:90%;
+                height:10%;
+                text-align:center;
+                -webkit-tap-highlight-color:rgba(0,0,0,0);
+            }
+            #scroll {
+                width: 100%;
+                height: 300px;
+                overflow: scroll;
+                overflow: auto;
+                color:"FFFFFF";
+            }
+            .align-left{
+                float:left;
+                margin: 0 15px 15px 0;
+            }
+            #btable{
+                position: fixed;
+                bottom:10%;
+                
+                background-color:transparent;
+                min-width:100%;
+                max-width:100%;
+                height:7%;
+            }
+            #menu
+            
+            {
+                width:15%;
+                height:9%;
+                -webkit-tap-highlight-color: rgba(0,0,0,0);
+                position:absolute;
+                z-index:99999;
+                display:block;
+                top:4%;
+                left: 0;
+            }
+            #bar{
+                min-width:100%;
+                max-width:100%;
+                height:7%;
+                display:block;
+                top:10%;
+            }
+            #NP{
+                text-align:center;
+                
+            }
+            #menuCon
+            {
+                width:7%;
+                height:5%;
+                -webkit-tap-highlight-color: rgba(0,0,0,0);
+                position:absolute;
+                z-index:99999;
+                display:block;
+                top:21%;
+                left: 12%;
+            }
+            div.item {
+                padding: 0.7em 0.7em;
+                margin-right: 10%;
+                margin-left: 10%;
+                margin: 0px, 0px, 0px, 0px;
+                border: 2px solid #002c45;
+                background-image: -webkit-gradient(linear, center top, center bottom, from(#003858), to(#01466e));
+                border-radius: 8px;
+                min-height:10%;
+                max-height:10%;
+            }
+            
+            div#footer {
+                background-image: url("../brandon/footer.png");
+                position: fixed;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                max-height: 10%;
+                min-height: 10%;
+            }
+          
+            #header h1{
+                font-family: Agency FB;
+                margin: 0;
+                background-color: #ccc;
+                border-bottom: 1px solid #666;
+                color: #222;
+                display: block;
+                font-weight: bold;
+                padding: 0px 0;
+                text-align: right;
+                padding-right: 0%;
+                text-shadow:0px 1px 1px #fff;
+                /* hz offset, vr offset, blur, color */
+                background-image: -webkit-gradient(linear, left top, left bottom, from(#ccc), to(#999));
+            }

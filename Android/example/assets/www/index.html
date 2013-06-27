@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Coyote Radio</title>
+	
+	<link rel="stylesheet" type="text/css" href="css/index.css"> <!--  stylesheet for the entire page -->
+    <script type="text/javascript" src="ajax.js"></script> <!--  script to use ajax to parse data -->
+    <script type="text/javascript" src="cordova-2.3.0.js"></script> <!--  script for cordova framework -->
+	<script src="js/jquery-1.7.2.min.js"></script> <!--  script for jquery -->
+	<script src="js/nowPlaying.js"></script> <!--  script to get current song -->
+	<script src="js/test.js"></script> <!--  script for ads -->
+	<script src="js/mediaPlayer.js"></script> <!--  script for media player -->
+	<script src="js/toggle.js"></script> <!--  script to toggle play button -->
+	<script src="js/hidePages.js"></script> <!--  script to hide page -->
+	<script type="text/javascript" charset="utf-8" src="PhoneListener.js"></script> <!-- see if phone us ringing -->
+	<script src="js/phone.js"></script> <!--  pause or play music -->
+</head>
+<body>
+	<div>
+		<img id="banner" src="file:///android_asset/www/cory/Coyote_Radio_Log.png"> <!-- banner -->
+	</div>
+    <div id="in"> <!-- first page to come up -->
+    	<img class="bar" src="file:///android_asset/www/cory/menuheader.png"> <!-- main menu bar -->
+    	<p> <!-- puts room between the bar and actual clickable content -->
+    	<a href="#"  id="tryHard" onclick="hide('hidden')"><img class="nowPl" src="file:///android_asset/www/cory/nowplaying.png"></a>   <!-- closes main page and opens now playing page -->
+    	<a href="#" id="tryHard1" onclick="login('http://m.csusb.edu/coyoteradio#/coyoteradio/home/programSchedule.html')"><img class="nowPl" src="file:///android_asset/www/cory/programschedule.png"></a>    <!--  opens up mobile program schedule -->
+    	<a href="#" id="tryHard2" onclick="login('http://m.csusb.edu/coyoteradio#/coyoteradio/home/events.html')"><img class="nowPl" src="file:///android_asset/www/cory/events.png"></a>    <!--  opens up mobile event schedule -->
+    	<a href="#" id="tryHard3" onclick="login('http://m.csusb.edu/coyoteradio#/coyoteradio/home/advertising.html')"><img class="nowPl" src="file:///android_asset/www/cory/becomeasponsor.png"></a> <!--  opens up mobile advertisment -->
+    	<a href="#" id="tryHard4" onclick="hide('contact')"><img class="nowPl" src="file:///android_asset/www/cory/contactus.png"></a> <!--  closes main page and opens up contact us page -->
+    	</p>
+    </div>
+    <div id="contact"> <!-- contact us page -->
+        <a href="#" onclick="hide('success')"><img class="menu" src="file:///android_asset/www/cory/back.png"></a> <!--  closes contact us page and opens main page -->
+        <img class="bar" src="file:///android_asset/www/cory/contactusheader.png"> <!-- contact us bar -->
+        <p>  <!-- puts room between the bar and actual clickable content -->
+       	<a onclick="login('https://www.facebook.com/csusbcoyoteradio')"><img class="like" src="file:///android_asset/www/cory/facebook.png"></a> <!--  opens up mobile facebook page -->
+       	<a onclick="login('https://twitter.com/coyoteradiocsu')"><img class="like" src="file:///android_asset/www/cory/twitter.png"></a> <!--  opens up mobile twitter page -->
+        <a onclick="login('http://www.youtube.com/thecoyoteradio')"><img class="like" src="file:///android_asset/www/cory/youtube.png"></a> <!--  opens up mobile youtube page -->
+    	<a onclick="login('http://m.csusb.edu/coyoteradio#/coyoteradio/home/contactUs.html')"><img class="like" src="file:///android_asset/www/cory/contactstaff.png"></a> <!--  opens up staff contact page -->
+		<a onclick="login('http://m.csusb.edu/coyoteradio#/coyoteradio/home/ourStory.html')"><img class="like" src="file:///android_asset/www/cory/ourstory.png"></a> <!--  opens up mobile story page -->
+    	</p>
+    </div>
+   	<div id="se">  	<!-- now playing page -->
+   		<div>
+   			<a href="#" onclick="hide('success')"><img class="menu" src="file:///android_asset/www/cory/back.png"></a> <!--  closes now playing p[age and opens main page -->
+   		</div> 
+   			<img class="bar" src="file:///android_asset/www/cory/nowplayingheader.png"> <!--  now playing bar -->
+   		<div id="alignR">
+   		<div class="next"> <!--  puts next song coming up -->
+   						<font COLOR="#FFFFFF"><span class="past">Up Next:</span></font> 
+						<font COLOR="#FFFFFF"><span id="nextSong" class="prev"></span></font> <!--  next song -->
+					<br>
+						<font COLOR="#FFFFFF"><span id="nextArtist" class="artist"></span></font> <!--  next artist -->
+					</div>
+		</div>
+   		<div>
+   			<img class="headphones" src="file:///android_asset/www/cory/album.png"/> <!--  the album record main picture -->
+   		</div>
+   		<div id="NP"> <!-- current song pl;aying -->
+					<p>
+						<font COLOR="#FFFFFF"><span id="currentSong" class="now"></span></font> <!--  current song playing -->
+					<br>
+					<font COLOR="#FFFFFF"><span class="past">By:</span></font>
+						<font COLOR="#FFFFFF"><span id="currentArtist" class="artist2"></span></font> <!-- current artist -->
+					</p>
+		</div>
+        <a href="#" onclick="artistBio()"><font COLOR="#FFFFFF">Artist Bio</font></a>
+        <div>
+   	<a id="adUrl" href="#" onclick="login('http://raffma.csusb.edu')"><img id="ad" src="file:///android_asset/www/cory/raffma.png"></a> <!--  rotating ads -->
+        </div>
+        </div>
+	<div id="footer">
+		<a id="Play" href="#" onclick="playAudio('http://media3.csusb.edu/'); "> <img id="playStop" src="file:///android_asset/www/cory/play2.png"></a>  <!--  footer that has play button on any page you are on -->
+	</div>
+</body>
+</html>

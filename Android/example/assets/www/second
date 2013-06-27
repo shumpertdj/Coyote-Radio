@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Coyote Radio</title>
+
+	<style type="text/css">
+		#playStop {
+    			width:50px;
+    			height:50px;
+ 		}
+ 		#img{
+ 				min-width:100%;
+ 				max-width:100%;
+ 				height:"25px";
+ 		}
+	</style>
+	<script type="text/javascript" charset="utf-8" src="cordova-2.3.0.js"></script>
+    <script type="text/javascript" charset="utf-8">
+       function onDeviceReady() {
+            playAudio("http://media3.csusb.edu/");
+       }
+
+       // Audio player
+       //
+       var my_media = null;
+       var mediaTimer = null;
+
+       // Play audio
+       //
+       function playAudio(src) {
+           // Create Media object from src
+           my_media = new Media(src, onSuccess, onError);
+
+           // Play audio
+           my_media.play();
+
+           // Update my_media position every second
+           if (mediaTimer == null) {
+               mediaTimer = setInterval(function() {
+                    // get my_media position
+                    my_media.getCurrentPosition(
+                        // success callback
+                        function(position) {
+                            if (position > -1) {
+                                setAudioPosition((position) + " sec");
+                            }
+                        },
+                        // error callback
+                        function(e) {
+                            console.log("Error getting pos=" + e);
+                            setAudioPosition("Error: " + e);
+                        }
+                    );
+                }, 1000);
+            }
+        }
+
+        // Stop audio
+        // 
+        function stopAudio() {
+            if (my_media) {
+                my_media.stop();
+            }
+            clearInterval(mediaTimer);
+            mediaTimer = null;
+        }
+
+        // onSuccess Callback
+        //
+        function onSuccess() {
+            console.log("playAudio():Audio Success");
+        }
+
+        // onError Callback 
+        //
+        function onError(error) {
+            alert('code: '    + error.code    + '\n' + 
+                  'message: ' + error.message + '\n');
+        }
+
+        // Set audio position
+        // 
+        function setAudioPosition(position) {
+            document.getElementById('audio_position').innerHTML = position;
+        }
+
+    </script>
+	<script type="text/javascript"> 
+   		var togle='1';
+		var play;
+		var Audio;
+
+		window.onload=function() {
+	   		play=document.getElementById('playStop');
+			document.getElementById('Play').onclick=function() {
+	   			toggle();
+   				return false;
+  			};
+ 		};
+ 		function toggle(){
+			if(togle=='1'){
+	   			play.src="file:///android_asset/www/cory/stop-button-md.png";	   			
+   				playAudio('http://media3.csusb.edu/');
+   				togle='0';
+ 			}
+			else {
+   				play.src="file:///android_asset/www/cory/play-button-trans2.png";
+   				stopAudio();
+  	 			togle='1';
+  			}
+ 		} 
+ 		function callAnothePage1()
+             {
+                window.location = "index.html";
+             }
+	</script>
+
+</head>
+<body bgcolor="#000000">
+    <div>
+    <img id="img" src="file:///android_asset/www/cory/editedbannerC.png">
+    </div>
+    <div>
+    <a href="#" onclick="callAnothePage1()"><img src="file:///android_asset/www/cory/menu.png" width="25px" height="25px"></a>
+    <div>
+    <img src="http://www.embed.verite.co/timeline/?source=0ArlpjbmnaJ1qdGJrdFhFTS11SGhXU080a2piQlJxR3c&font=Bevan-PotanoSans&maptype=toner&lang=en&height=300"></a>
+    </div>
+    <div>
+       <img id="img" src="file:///android_asset/www/cory/images.png" height="100px">
+    </div>
+    <div>
+    	<center><a href="http://progressive.com"><img width="220px" src="http://2.bp.blogspot.com/_-y6ewRLtdKs/S8UL1cedMpI/AAAAAAAAAxU/4IfYlvAOZLA/s1600/flo.jpg" height="50px"></a></center>
+    </div>
+    <div>
+    <center> <a id="playStop" href="#" class="btn large" onclick="playAudio('http://media3.csusb.edu/');"> <img id="playStop" src="file:///android_asset/www/cory/play-button-trans2.png"> </a></center>       
+    </div>
+    <div>
+       <img id="img" src="file:///android_asset/www/cory/bg_crowd.png">
+    </div>
+</body>
+</html>
